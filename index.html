@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pixel Art Maker</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>Aly's Pixel Art Maker</h1>
+
+    <h2>1. Choose Grid Size</h2>
+    <form id="sizePicker">
+        Height:
+        <input type="number" id="inputHeight" name="height" min="1" value="10">
+        <br>
+        <br>
+        Width:
+        <input type="number" id="inputWidth" name="width" min="1" value="10">
+        <br>
+        <br>
+        <button type="submit" id="submitButton">Create Grid</button>
+    </form>
+
+    <h2>2. Select a color</h2>
+    <input type="color" id="colorPicker">
+
+    <h2>3. Design your canvas below</h2>
+    <br>
+    <table id="pixelCanvas"></table>
+    <script src="designs.js"></script>
+</body>
+</html>
