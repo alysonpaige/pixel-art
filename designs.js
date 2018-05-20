@@ -1,16 +1,16 @@
-var grid = $('#pixelCanvas');
+let grid = $('#pixelCanvas');
 
 function makeGrid() {
   // Select size input
-  var height = $('#inputHeight').val();
-  var width = $('#inputWidth').val();
+  const height = $('#inputHeight').val();
+  const width = $('#inputWidth').val();
   // start with clean grid
   grid.find('tr').remove();
   // nested loop to create grid using size submitted by user
-  for (var y = 0; y < height; y++) {
+  for (let y = 0; y < height; y++) {
     // append grid for height
     grid.append('<tr></tr>');
-    for (var x = 0; x < width; x++) {
+    for (let x = 0; x < width; x++) {
       // append grid for width based on last tr
       grid.find('tr:last').append('<td></td>');
     }
@@ -23,8 +23,8 @@ $(document).ready(function() {
     makeGrid();
   });
   // Select color input
-  var selectedColor = $('#colorPicker');
-  var color = selectedColor.val();
+  let selectedColor = $('#colorPicker');
+  let color = selectedColor.val();
   selectedColor.change(function() {
     color = selectedColor.val();
   })
@@ -32,10 +32,10 @@ $(document).ready(function() {
   grid.click('td', function(e) {
     color = selectedColor.val();
     $(e.target).css('background-color', color);
-  });
+  })
 });
 // when button is hovered, add shadow
-$("button").hover(function() { 
+$("#submitButton").hover(function() { 
    $(this).toggleClass('shadowClass');
 });
 
