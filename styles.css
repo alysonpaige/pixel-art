@@ -45,7 +45,7 @@ input[type=number] {
     width: 6em;
 }
 
-button {
+#submitButton {
   background-color: #4CAF50;
   border: none;
   border-radius: 2px;
